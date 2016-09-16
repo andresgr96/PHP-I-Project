@@ -1,0 +1,27 @@
+.this-header
+{
+  color: black;
+  text-align: center;
+  font-size: 60px;
+  font-family: bold;
+  margin-top: 20px;
+
+}
+.list {
+  background-color: D0D0D0;
+border-radius: 3px;
+max-width: 200px;
+
+}
+p {
+  color:737070;
+}
+h4{
+  color:black;
+}
+img{
+  max-width: 110px;
+  max-height: 110px;
+
+
+}

@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Contacts</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class = "container">
+     <div class="navbar navbar-inverse navbar-fixed-top"></div>
+      <div class = "jumbotron">
+         <div class = "this-header"
+          <h1>Contact List</h1>
+          <img src = "img/cc.png">
+        </div>
+        <form action="/contact" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-control" id="name" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" class="form-control" id="phone" required>
+
+                <label for="address">Address</label>
+                <input type="text" name="address" class="form-control" id="address" required>
+            </div>
+                    <button type="submit" class="btn-sm btn-success">Submit</button>
+        </form>
+
+                    <form action="/clear_list" method="post">
+                        <button type="submit" class="btn-sm btn-danger">Clear</button>
+                    </form>
+
+      </div>
+      <hr>
+      <div class = "list">
+        {% if contacts is not empty %}
+            <ul>
+            {% for contact in contacts %}
+                <h4> {{contact.name}} </h4>
+                <p> {{contact.phone}} </p>
+                <p> {{contact.address}} </p>
+            {% endfor %}
+            </ul>
+        {% endif %}
+      </div>
+      <div class = "container">
+       <div class="navbar navbar-inverse navbar-fixed-bottom"></div>
+    </div>
+</body>
+</html>
